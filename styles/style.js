@@ -19,4 +19,12 @@ export const myStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  textInput : {
+    height: 50,
+    borderWidth: 1,
+    paddingLeft: 20,
+    margin: 5,
+    borderColor: "#009688",
+    backgroundColor: "white"
+  }
 });
