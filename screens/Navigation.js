@@ -4,22 +4,43 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "./Home";
 import List from "./List";
-import { myStyles } from "../styles/style";
-import { View } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
   return (
-
-
-    <NavigationContainer >
+    <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} options={{ title: "Home Page" }}/>
-        <Stack.Screen name="List" component={List} options={{ title: "List Page"}}/>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: "Home Page",
+            headerStyle: {
+              backgroundColor: "#758ECD",
+            },
+            headerTintColor: "#301A4B",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+        />
+        <Stack.Screen
+          name="List"
+          component={List}
+          options={{
+            title: "List Page",
+            headerStyle: {
+              backgroundColor: "#C1CEFE",
+            },
+            headerTintColor: "#624CAB",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
-   
   );
 };
 
